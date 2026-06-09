@@ -1,4 +1,9 @@
 import { defineConfig, devices } from '@playwright/test';
+import { config } from 'dotenv';
+import { resolve } from 'path';
+
+// Load .env file if present (ignored when vars are already set via CI/shell)
+config({ path: resolve(__dirname, '.env'), override: false });
 
 export default defineConfig({
   testDir: './tests',
