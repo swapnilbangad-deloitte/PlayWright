@@ -46,7 +46,8 @@ function getLambdaTestWSEndpoint(testName: string): string {
 // ---------------------------------------------------------------------------
 test('Scenario 1: Simple Form Demo - enter message and validate output', async () => {
   const browser = await chromium.connect(
-    getLambdaTestWSEndpoint('Scenario 1 - Simple Form Demo')
+    getLambdaTestWSEndpoint('Scenario 1 - Simple Form Demo'),
+    { timeout: 60000 }
   );
   const page = await browser.newPage();
 
@@ -91,7 +92,8 @@ test('Scenario 1: Simple Form Demo - enter message and validate output', async (
 // ---------------------------------------------------------------------------
 test('Scenario 2: Drag & Drop Slider - move Default value 15 slider to 95', async () => {
   const browser = await chromium.connect(
-    getLambdaTestWSEndpoint('Scenario 2 - Drag & Drop Slider')
+    getLambdaTestWSEndpoint('Scenario 2 - Drag & Drop Slider'),
+    { timeout: 60000 }
   );
   const page = await browser.newPage();
 
@@ -127,7 +129,8 @@ test('Scenario 2: Drag & Drop Slider - move Default value 15 slider to 95', asyn
 // ---------------------------------------------------------------------------
 test('Scenario 3: Input Form Submit - validation error then successful submission', async () => {
   const browser = await chromium.connect(
-    getLambdaTestWSEndpoint('Scenario 3 - Input Form Submit')
+    getLambdaTestWSEndpoint('Scenario 3 - Input Form Submit'),
+    { timeout: 60000 }
   );
   const page = await browser.newPage();
 
